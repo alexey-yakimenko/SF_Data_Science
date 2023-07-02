@@ -6,7 +6,7 @@ import numpy as np
 
 
 def random_predict(number: int = 1) -> int:
-    """Рандомно угадываем число
+    """Рандомно угадываем число, сближая рамки минимально и максимально возможного из перечня рандомных чисел
 
     Args:
         number (int, optional): Загаданное число. Defaults to 1.
@@ -15,19 +15,22 @@ def random_predict(number: int = 1) -> int:
         int: Число попыток
     """
     count = 0
-    max_num = 100
-    min_num = 1
+    min_number = 1 # нижняя граница рандомайзера
+    max_number = 101 # верхняя граница рандомайзера
+    
     while True:
         count += 1
-
-        mid_num = (max_num - min_num)//2 
-        predict_number =  mid_num # предполагаемое число
-        if number > predict_number:
-            min_num = predict_number
-        elif number < predict_number:
-            max_num = predict_number
-        elif number == predict_number:
+        predict_number = np.random.randint(min_number, max_number) # предполагаемое число
+        
+        if number == predict_number:
             break  # выход из цикла если угадали
+        
+        elif number > predict_number:
+            min_number = predict_number # переносим нижнюю границу рандомайзера
+            
+        elif number < predict_number:
+            max_number = predict_number
+                      
     return count
 
 
