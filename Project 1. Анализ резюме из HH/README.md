@@ -1,44 +1,73 @@
 # Project 1. Анализ резюме из HeadHunter.
 
-## Содержание
-[1.Описание проекта](https://github.com/alexey-yakimenko/SF_Data_Science/blob/main/Project_1. Анализ резюме из HH/README.md#-Описание-проекта) 
+## <a id="title0">Оглавление
+[1.Описание проекта](#title1) 
 
-[2. Какие задачи стоят перед проектом?](https://github.com/alexey-yakimenko/SF_Data_Science/blob/main/Project_1. Анализ резюме из HH/README.md#-Какие-задачи-стоят-перед-проектом)
+[2. Какие задачи стоят перед проектом?](#title2)
 
-[3. Brief information about the data](https://github.com/alexey-yakimenko/SF_Data_Science/blob/main/project_0/README.md#-Brief-information-about-the-data)
+[3. Краткая информация о базе данных](#title3)
 
-[4. Stages of work on the project](https://github.com/alexey-yakimenko/SF_Data_Science/blob/main/project_0/README.md#-Stages-of-work-on-the-project)
+[4. Этапы выполнения проекта](#title4)
 
-[5. Results](https://github.com/alexey-yakimenko/SF_Data_Science/blob/main/project_0/README.md#-Results)
+[5. Итоги](#title5)
 
-[6. Conclusions](https://github.com/alexey-yakimenko/SF_Data_Science/blob/main/project_0/README.md#-Conclusions)
+[6. Выводы](#title6)
 
-### Описание проекта
-Guess the number guessed by the computer in the minimum number of attempts.
+### <a id="title1">Описание проекта</a>
 
-:arrow_up: [To the table of contents](https://github.com/alexey-yakimenko/SF_Data_Science/blob/main/project_0/README.md#-Table-of-contents)
+Необходимо проанализировать базу данных резюме из HeadHunter на предмет прогнозирования желаемой зарплаты.  
+[Расположение базы данных](https://drive.google.com/file/d/12pByqWjBGqjQqAHi8jh62hp_Sw3tI9Xd/view?usp=sharing)
 
-### Какие задачи стоят перед проектом?
-We need to write a program that guesses the number in the minimum number of attempts.
+### <a id="title2">Какие задачи стоят перед проектом?</a>
+На данном этапе требуется предобработать базу данных, модифицировав признаки, выявив те из них, которые влияют на желаемую з/п и очистить данные.
 
-**Competition conditions**
-- The computer guesses an integer from 1 to 100, and we need to guess it. By "guess" I mean "write a program that guesses a number".
-- The algorithm takes into account information about whether the random number is greater or less than what we need.
+### <a id="title3">Краткая информация о базе данных
+В базе данных представлена следующая информация о соискателях:
+* Пол, возраст	
+* ЗП	
+* Ищет работу на должность:	
+* Город, переезд, командировки	
+* Занятость	
+* График	
+* Опыт работы	
+* Последнее/нынешнее место работы	
+* Последняя/нынешняя должность	
+* Образование и ВУЗ	
+* Обновление резюме	
+* Авто
 
-**Quality metric**
-The results are evaluated by the average number of attempts at 1000 repetitions.
+### Этапы выполнения проекта
+1. Преобразование признаков для более удобного сравнения.
+2. Выявление взаимосвязи между разными признаками, в первую очередь, связанных с желаемой зарплатой.
+3. Очистка данных
 
-**What we practice**
-Learning to write good Python code
+### Итоги
+База данных преобразована и очищена от выбросов.
 
-### Brief information about the data
-....
+Итоговый вид базы данных:
+* Ищет работу на должность:
+* Последнее/нынешнее место работы	
+* Последняя/нынешняя должность	
+* Обновление резюме	
+* Авто
+* Образование
+* Пол
+* Возраст
+* Опыт работы (мес)
+* Город
+* Готовнось к переезду
+* Готовность к командировкам
+* полная занятость
+* полный день
+* частичная занятость
+* сменный график
+* проектная работа
+* гибкий график
+* волонтёрство
+* удалённая работа
+* стажировка
+* вахтовый метод
+* ЗП (руб)
 
-### Stages of work on the project
-....
-
-### Results
-....
-
-### Conclusions
-....
+### Выводы
+Поставленная задача выполнена, можно дальше работать с базой данных, анализируя необходимые зависимости.
